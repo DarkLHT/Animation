@@ -1,0 +1,21 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="clr-namespace:AnimationScanPlan.Controls">
+
+    <Style TargetType="controls:ContentTransitionControl">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="controls:ContentTransitionControl">
+                    <Grid x:Name="_root">
+                        <ContentControl x:Name="_current" ContentTemplate="{TemplateBinding ContentTemplate}" />
+                        <ContentControl x:Name="_old" ContentTemplate="{TemplateBinding ContentTemplate}"  />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"></SolidColorBrush>
+    <SolidColorBrush x:Key="ButtonHover" Color="Transparent"></SolidColorBrush>
+    <SolidColorBrush x:Key="Shadow" Color="Transparent"></SolidColorBrush>
+</ResourceDictionary>
