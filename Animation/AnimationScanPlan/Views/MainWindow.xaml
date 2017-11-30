@@ -1,0 +1,74 @@
+﻿<Window x:Class="AnimationScanPlan.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:AnimationScanPlan.Controls"
+        xmlns:viewModel="clr-namespace:AnimationScanPlan.ViewModels"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        mc:Ignorable="d"
+        Background="#08107b"
+        Title="MainWindow" Height="350" Width="525">
+    
+    <Window.Resources>
+        <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary Source="../Controls/ContentTransition.xaml" />
+        </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+
+        <DockPanel Panel.ZIndex="99"  Margin="0, 10, 0, 10" >
+            <StackPanel Orientation="Vertical">
+                <Button Content="View 1" Command="{Binding View1Command}"/>
+                <Button Content="View 2"  Command="{Binding View2Command}"/>
+            </StackPanel>
+        </DockPanel>
+       
+
+        <controls:ContentTransitionControl Content="{Binding SomeView}"  Panel.ZIndex="1" Grid.Column="1" Duration="0:0:0.6" Margin="0, 10, 0, 10" >
+            <controls:ContentTransitionControl.ContentTemplate>
+                <DataTemplate DataType="{x:Type viewModel:SomeView}">
+                    <ContentControl Content="{Binding}">
+                        <ContentControl.Style>
+                            <Style TargetType="ContentControl">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding}" Value="View1">
+                                        <Setter Property="ContentTemplate">
+                                            <Setter.Value>
+                                                <DataTemplate>
+                                                    <Border BorderThickness="1" BorderBrush="WhiteSmoke">
+                                                        <TextBlock Text="View 1" Foreground="WhiteSmoke" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30"/> <!--You can change the TextBlock and put the Material view--> 
+                                                    </Border>
+                                                </DataTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding}" Value="View2">
+                                        <Setter Property="ContentTemplate">
+                                            <Setter.Value>
+                                                <DataTemplate>
+                                                    <Border BorderThickness="1" BorderBrush="WhiteSmoke">
+                                                        <TextBlock Text="View 2" Foreground="WhiteSmoke" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30"/> <!--You can change the TextBlock and put the Material view-->
+                                                    </Border>
+                                                </DataTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </ContentControl.Style>
+                    </ContentControl>
+                </DataTemplate>
+             
+            </controls:ContentTransitionControl.ContentTemplate>
+        </controls:ContentTransitionControl>
+    </Grid>
+</Window>

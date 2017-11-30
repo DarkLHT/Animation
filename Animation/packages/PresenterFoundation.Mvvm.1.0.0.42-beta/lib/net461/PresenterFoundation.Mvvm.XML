@@ -1,0 +1,1087 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PresenterFoundation.Mvvm</name>
+    </assembly>
+    <members>
+        <member name="T:PresenterFoundation.Mvvm.Actions.ShowLoadFileDialogAction">
+            <summary>
+            A trigger action that opens a standard <see cref="T:Microsoft.Win32.OpenFileDialog"/>.
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Actions.ShowLoadFileDialogAction.ExecuteAction">
+            <summary>
+            Execution of the action
+            </summary>
+            <remarks>
+            The notification FileName and FilePath contain respectively the SafeFileName and FileName of the chosen file,
+            or an empty string if the dialog was cancelled.
+            </remarks>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Actions.TriggerActionBase`1">
+            <summary>
+            Represents an attachable object that encapsulates a unit of functionality.
+            </summary>
+            <typeparam name="T">The concrete type of <see cref="T:Prism.Interactivity.InteractionRequest.INotification"/> that trigger this object.</typeparam>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Actions.TriggerActionBase`1.Notification">
+            <summary>
+            Gets the <see cref="T:Prism.Interactivity.InteractionRequest.INotification"/> that triggered this object.
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Actions.TriggerActionBase`1.Callback">
+            <summary>
+            A callback to call when the action is completed.
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Actions.TriggerActionBase`1.Invoke(System.Object)">
+            <summary>
+            Invokes the action.
+            </summary>
+            <param name="parameter">The parameter of the action. This must be an <see cref="T:Prism.Interactivity.InteractionRequest.InteractionRequestedEventArgs"/>.</param>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Actions.TriggerActionBase`1.ExecuteAction">
+            <summary>
+            Override this method with actual action execution.
+            </summary>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Behaviors.BaseBehavior`1">
+            <summary>
+            Encapsulate behavior in an attachable object.
+            </summary>
+            <typeparam name="T">The type of the object this behavior can be attached to.</typeparam>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Behaviors.BaseBehavior`1.OnChanged">
+            <summary>
+            Called when the behavior is modified.
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Behaviors.BaseBehavior`1.OnSetup">
+            <summary>
+            Override to execute code when the behaviour is attached to an element.
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Behaviors.BaseBehavior`1.OnCleanup">
+            <summary>
+            Override to execute code when the behaviour is detached from an element.
+            </summary>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Behaviors.EnumImageResourceBehavior">
+            <summary>
+            A behavior that uses the Description attribute of an enum as a resource key for the Source property of an Image control.
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Behaviors.EnumImageResourceBehavior.ValueProperty">
+            <summary>
+            Identifies the PresenterFoundation.Mvvm.Behaviors.EnumImageResourceBehavior.Value dependency property.
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Behaviors.EnumImageResourceBehavior.FormatProperty">
+            <summary>
+            Identifies the PresenterFoundation.Mvvm.Behaviors.EnumImageResourceBehavior.Value dependency property.
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Behaviors.EnumImageResourceBehavior.Value">
+            <summary>
+            Gets or sets the Enum to use as a resource key.
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Behaviors.EnumImageResourceBehavior.Format">
+            <summary>
+            Gets or sets the Format to use as a resource key.
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Behaviors.EnumImageResourceBehavior.OnSetup">
+            <summary>
+            Try to set the image source when the behavior is attached.
+            </summary>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Behaviors.ImageSourceKeyBehavior">
+            <summary>
+            A behavior that sets resource key for the Source property of an Image control.
+            </summary>
+            <remarks>
+            Use this behavior when it is required to bind on the Resource Key instead of just using a DynamicResource markup extension.
+            </remarks>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Behaviors.ImageSourceKeyBehavior.SourceKeyProperty">
+            <summary>
+            Identifies the PresenterFoundation.Mvvm.Behaviors.ImageSourceKeyBehavior.SourceKey dependency property.
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Behaviors.ImageSourceKeyBehavior.SourceKey">
+            <summary>
+            Gets or sets the resource key.
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Behaviors.ImageSourceKeyBehavior.OnSetup">
+            <summary>
+            Try to set the image source when the behavior is attached.
+            </summary>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Behaviors.NumericTextBoxBindindBehavior">
+            <summary>
+            NumericTextBoxBindindBehavior
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Behaviors.NumericTextBoxBindindBehavior.ElementNameProperty">
+            <summary>
+            Interaction logic for NumericTextBoxBindindBehavior.cs
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Behaviors.NumericTextBoxBindindBehavior.PathProperty">
+            <summary>
+            Interaction logic for NumericTextBoxBindindBehavior.cs
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Behaviors.NumericTextBoxBindindBehavior.DecimalDigitsProperty">
+            <summary>
+            Interaction logic for NumericTextBoxBindindBehavior.cs
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Behaviors.NumericTextBoxBindindBehavior.ElementName">
+             <summary>
+            Get Set ElementName
+             </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Behaviors.NumericTextBoxBindindBehavior.Path">
+             <summary>
+            Get Set Path
+             </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Behaviors.NumericTextBoxBindindBehavior.DecimalDigits">
+             <summary>
+            Get Set DecimalDigits
+             </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Behaviors.NumericTextBoxBindindBehavior.OnSetup">
+            <summary>
+            OnSetup
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Behaviors.NumericTextBoxBindindBehavior.OnCleanup">
+            <summary>
+            OnCleanup
+            </summary>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Behaviors.NumericTextBoxMouseWheelBehavior">
+            <summary>
+            NumericTextBoxKnobBehavior
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Behaviors.NumericTextBoxMouseWheelBehavior.ValueProperty">
+            <summary>
+            Interaction logic for NumericTextBoxKnobBehavior.cs
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Behaviors.NumericTextBoxMouseWheelBehavior.IncrementValueProperty">
+            <summary>
+            Interaction logic for NumericTextBoxKnobBehavior.cs
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Behaviors.NumericTextBoxMouseWheelBehavior.MinimumValueProperty">
+            <summary>
+            Interaction logic for NumericTextBoxKnobBehavior.cs
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Behaviors.NumericTextBoxMouseWheelBehavior.MaximumValueProperty">
+            <summary>
+            Interaction logic for NumericTextBoxKnobBehavior.cs
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Behaviors.NumericTextBoxMouseWheelBehavior.ResolutionProperty">
+            <summary>
+            Interaction logic for NumericTextBoxKnobBehavior.cs
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Behaviors.NumericTextBoxMouseWheelBehavior.IsTextChangedProperty">
+            <summary>
+            Interaction logic for NumericTextBoxKnobBehavior.cs
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Behaviors.NumericTextBoxMouseWheelBehavior.Value">
+             <summary>
+            Get Set Value
+             </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Behaviors.NumericTextBoxMouseWheelBehavior.IncrementValue">
+             <summary>
+            Get Set IncrementValue
+             </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Behaviors.NumericTextBoxMouseWheelBehavior.MinimumValue">
+             <summary>
+            Get Set MinimumValue
+             </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Behaviors.NumericTextBoxMouseWheelBehavior.MaximumValue">
+             <summary>
+            Get Set MaximumValue
+             </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Behaviors.NumericTextBoxMouseWheelBehavior.Resolution">
+             <summary>
+            Get Set Resolution
+             </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Behaviors.NumericTextBoxMouseWheelBehavior.IsTextChanged">
+             <summary>
+            Get Set IsTextChanged
+             </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Behaviors.NumericTextBoxMouseWheelBehavior.OnSetup">
+            <summary>
+            OnSetup
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Behaviors.NumericTextBoxMouseWheelBehavior.OnCleanup">
+            <summary>
+            OnCleanup
+            </summary>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Behaviors.TextBoxFocusOnLoadBehavior">
+            <summary>
+            TextBoxFocusOnLoadBehavior
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Behaviors.TextBoxFocusOnLoadBehavior.IsActivatedProperty">
+            <summary>
+            IsActivatedProperty
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Behaviors.TextBoxFocusOnLoadBehavior.IsActivated">
+            <summary>
+            Get Set IsActivated
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Behaviors.TextBoxFocusOnLoadBehavior.OnSetup">
+            <summary>
+            OnSetup
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Behaviors.TextBoxFocusOnLoadBehavior.OnCleanup">
+            <summary>
+            OnCleanup
+            </summary>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Behaviors.TextBoxInputMode">
+            <summary>
+            TextBoxInputMode
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Behaviors.TextBoxInputMode.None">
+            <summary>
+            None
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Behaviors.TextBoxInputMode.DecimalInput">
+            <summary>
+            DecimalInput
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Behaviors.TextBoxInputMode.DigitInput">
+            <summary>
+            DigitInput
+            </summary>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Behaviors.TextBoxInputBehavior">
+            <summary>
+            TextBoxInputBehavior
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Behaviors.TextBoxInputBehavior.AcceptNegativeInputProperty">
+            <summary>
+            AcceptNegativeInputProperty
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Behaviors.TextBoxInputBehavior.AcceptNegativeInput">
+            <summary>
+            AcceptNegativeInput
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Behaviors.TextBoxInputBehavior.InputMode">
+            <summary>
+            InputMode
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Behaviors.TextBoxInputBehavior.#ctor">
+            <summary>
+            constructor
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Behaviors.TextBoxInputBehavior.OnSetup">
+            <inheritdoc />
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Behaviors.TextBoxInputBehavior.OnCleanup">
+            <inheritdoc />
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Behaviors.TextBoxFocusBehavior">
+            <summary>
+            A behavior that implement click focus on controls using a TextBox .
+            </summary>
+            <remarks>
+            The behavior can be instanciated on any FrameworkElement. If the AssociatedObject is not itself a TextBox,
+            the behavior will search the visual tree of the AssociatedObject to find a TextBox to target.
+            </remarks>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Behaviors.TextBoxFocusBehavior.OnSetup">
+            <summary>
+            Add mouse events required to select text.
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Behaviors.TextBoxFocusBehavior.OnCleanup">
+            <summary>
+            Remove mouse events.
+            </summary>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Behaviors.TextBoxSelectionBehavior">
+            <summary>
+            A behavior that implement got focus selection on controls using a TextBox to display text.
+            </summary>
+            <remarks>
+            The behavior can be instanciated on any FrameworkElement. If the AssociatedObject is not itself a TextBox,
+            the behavior will search the visual tree of the AssociatedObject to find a TextBox to target.
+            </remarks>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Behaviors.TextBoxSelectionBehavior.OnSetup">
+            <summary>
+            Add events required to find textbox and select text.
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Behaviors.TextBoxSelectionBehavior.OnCleanup">
+            <summary>
+            Remove events.
+            </summary>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Behaviors.TextBoxUpdateOnEnterBehavior">
+            <summary>
+            A behavior that implement Update Source onEnter on controls using a TextBox to display text.
+            </summary>
+            <remarks>
+            The behavior can be instanciated on any FrameworkElement. If the AssociatedObject is not itself a TextBox,
+            the behavior will search the visual tree of the AssociatedObject to find a TextBox to target.
+            </remarks>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Behaviors.TextBoxUpdateOnEnterBehavior.OnSetup">
+            <summary>
+            Add KeyDown event.
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Behaviors.TextBoxUpdateOnEnterBehavior.OnCleanup">
+            <summary>
+            Remove KeyDown events.
+            </summary>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.BindingProxy">
+            <summary>
+            An instance of BindingProxy in the resources of a FrameworkElement inherit the FrameworkElement's DataContext.
+            This resource can be used to bind on properties not in the same Visual Tree.
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.BindingProxy.DataProperty">
+            <summary>
+            Identifies the PresenterFoundation.Mvvm.BindingProxy.Data dependency property.
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.BindingProxy.Data">
+            <summary>
+            Gets or sets the data exposed by the BindingProxy.
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.BindingProxy.CreateInstanceCore">
+            <summary>
+            Creates a new instance of BindingProxy.
+            </summary>
+            <returns>The new instance.</returns>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Commands.CompositeCommand">
+            <summary>
+            An ICommand implementation that execute a list of commands.
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Commands.CompositeCommand.#ctor(System.Collections.Generic.IEnumerable{System.Windows.Input.ICommand})">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="E:PresenterFoundation.Mvvm.Commands.CompositeCommand.CanExecuteChanged">
+            <summary>
+            Occurs when changes occur that affect whether or not the command should execute.
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Commands.CompositeCommand.CanExecute(System.Object)">
+            <summary>
+            Defines the method that determines whether the command can execute in its current stats.
+            </summary>
+            <param name="parameter">Data used by the commands. If the commands do not require data to be passed, this object can be set to null.</param>
+            <returns>true if every commands in the composite can be executed; otherwise, false.</returns>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Commands.CompositeCommand.Execute(System.Object)">
+            <summary>
+            Defines the method to be called when the command is invoked.
+            </summary>
+            <param name="parameter">Data used by the commands. If the commands do not require data to be passed, this object can be set to null.</param>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Converters.ArithmeticConverter">
+            <summary>
+            Convert multiple numeric value to the result a an arithmetic operation between them.
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Converters.ArithmeticConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Convert the numbers in values using the parameter as an operator.
+            </summary>
+            <param name="values">The numbers to convert. There must be at least one.</param>
+            <param name="targetType">The type of the binding target property.</param>
+            <param name="parameter">An <see cref="T:PresenterFoundation.Mvvm.Converters.ArithmeticConverter.Operation"/> to apply to values. This must be set.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>The converted value.</returns>
+            <remarks>
+            If the operation is Substract or Divide, the operation is done in the order the values were passed to the converter.
+            If the operation is Divide, a value of 0 will throw an exception unless it's the first value.
+            </remarks>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Converters.ArithmeticConverter.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            ConvertBack is not supported by the arithmetic converter.
+            </summary>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Converters.ArithmeticConverter.Operation">
+            <summary>
+            The operations available to ArithmeticConverter.
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Converters.ArithmeticConverter.Operation.Add">
+            <summary>
+            Set as parameter to add the values.
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Converters.ArithmeticConverter.Operation.Subtract">
+            <summary>
+            Set as parameter to substract each value from the preceding result.
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Converters.ArithmeticConverter.Operation.Multiply">
+            <summary>
+            Set as parameter to multiply the values.
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Converters.ArithmeticConverter.Operation.Divide">
+            <summary>
+            Set as parameter to divide each value from the preceding result.
+            </summary>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Converters.ComparisonConverter">
+            <summary>
+            Convert two comparable values to the boolean result of a comparison between them.
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Converters.ComparisonConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Convert the numbers in values using the parameter as an operator.
+            </summary>
+            <param name="values">The numbers to compare. There must be two.</param>
+            <param name="targetType">The type of the binding target property.</param>
+            <param name="parameter">An <see cref="T:PresenterFoundation.Mvvm.Converters.ComparisonConverter.Operation"/> to apply to values. This must be set.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>The converted value.</returns>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Converters.ComparisonConverter.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            ConvertBack is not supported by the arithmetic converter.
+            </summary>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Converters.ComparisonConverter.Operation">
+            <summary>
+            The operations available to ComparisonConverter.
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Converters.ComparisonConverter.Operation.Equal">
+            <summary>
+            Set as parameter to validate equality of values.
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Converters.ComparisonConverter.Operation.NotEqual">
+            <summary>
+            Set as parameter to validate inequality of values.
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Converters.ComparisonConverter.Operation.Smaller">
+            <summary>
+            Set as parameter to validate first value is smaller then second value.
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Converters.ComparisonConverter.Operation.SmallerEqual">
+            <summary>
+            Set as parameter to validate first value is smaller then or equal to second value.
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Converters.ComparisonConverter.Operation.Greater">
+            <summary>
+            Set as parameter to validate first value is greater then second value.
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Converters.ComparisonConverter.Operation.GreaterEqual">
+            <summary>
+            Set as parameter to validate first value is greater then or equal to second value.
+            </summary>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Converters.CompositeConverter">
+            <summary>
+            Converts a value by passing it through an ordered list of converters.
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Converters.CompositeConverter.#ctor">
+            <summary>
+            Default Constructors.
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Converters.CompositeConverter.Converters">
+            <summary>
+            Gets the collection of converters.
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Converters.CompositeConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value using the converters list.
+            </summary>
+            <param name="value">The value produced by the binding source.</param>
+            <param name="targetType">The type of the binding target property. This is the targetType of the last converter in the list.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>A converted value. If the method returns null, the valid null value is used.</returns>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Converters.CompositeConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts back a value using the converters list backwards.
+            </summary>
+            <param name="value">The value that is produced by the binding target.</param>
+            <param name="targetType">The type to convert to. This is the targetType of the convertBack method of the first converter in the list.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>A converted value. If the method returns null, the valid null value is used.</returns>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Converters.EnumDescriptionConverter">
+            <summary>
+            Converts an Enum value to a resource string.
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Converters.EnumDescriptionConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Convert from an enum to its associated resource.
+            </summary>
+            <param name="value">The enum to convert</param>
+            <param name="targetType">The type of the binding target property. This should be string.</param>
+            <param name="parameter">The converter parameter to use. This should be null.</param>
+            <param name="culture">The culture to use in the converter. This is not required.</param>
+            <returns>A string resource corresponding to the enum value.</returns>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Converters.EnumDescriptionConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            
+            </summary>
+            <param name="value">The value that is produced by the binding target.</param>
+            <param name="targetType">The type to convert to.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>A converted value. If the method returns null, the valid null value is used.</returns>
+            <remarks>
+            This conversion is not supported.
+            </remarks>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Converters.NegateConverter">
+            <summary>
+            Convert a bool value to its negation.
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Converters.NegateConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a bool value to its negation.
+            </summary>
+            <param name="value">The value produced by the binding source. Thus must be a <see cref="T:System.Boolean"/>.</param>
+            <param name="targetType">The type of the binding target property. This should be <see cref="T:System.Boolean"/>.</param>
+            <param name="parameter">The converter parameter to use. This should be null.</param>
+            <param name="culture">The culture to use in the converter. This should be the default culture.</param>
+            <returns>The negation of value.</returns>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Converters.NegateConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a bool value to its negation.
+            </summary>
+            <param name="value">The value produced by the binding source. Thus must be a <see cref="T:System.Boolean"/>.</param>
+            <param name="targetType">The type of the binding target property. This should be <see cref="T:System.Boolean"/>.</param>
+            <param name="parameter">The converter parameter to use. This should be null.</param>
+            <param name="culture">The culture to use in the converter. This should be the default culture.</param>
+            <returns>The negation of value.</returns>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Converters.SolidBrushToColorConverter">
+            <summary>
+            SolidBrushToColorConverter
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Converters.SolidBrushToColorConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Converters.SolidBrushToColorConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <inheritdoc />
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Converters.VariableParameterConverter">
+            <summary>
+            A converter that fetch the parameter from a BindingProxy before passing it to another converter.
+            </summary>
+            <remarks>
+            Since the parameter is fetched from a BindingProxy, it can be bound using a binding. However, this converter does not
+            listen to the property changes of the BindingProxy, thus the binding won't react implicitely to parameter changes.
+            Each time Convert or ConvertBack is called, it will use the current value of the Data property of the BindingProxy.
+            </remarks>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Converters.VariableParameterConverter.ValueConverter">
+            <summary>
+            The converter to use to actually convert the value.
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Converters.VariableParameterConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Convert a value using ValueConverter, with the Data property of a BindingProxy as parameter.
+            </summary>
+            <param name="value">The value produced by the binding source.</param>
+            <param name="targetType">The type of the binding target property. This is the targetType of ValueConverter.</param>
+            <param name="parameter">A BindingProxy containing the parameter to use in its Data property.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>A converted value. If the method returns null, the valid null value is used.</returns>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Converters.VariableParameterConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts back a value using ValueConverter, with the Data property of a BindingProxy as parameter.
+            </summary>
+            <param name="value">The value that is produced by the binding target.</param>
+            <param name="targetType">The type to convert to. This is the targetType of the convertBack method of ValueConverter.</param>
+            <param name="parameter">A BindingProxy containing the parameter to use in its Data property.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>A converted value. If the method returns null, the valid null value is used.</returns>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Events.RequestData`1">
+            <summary>
+            A payload used to request data with an event.
+            </summary>
+            <typeparam name="T">The type of the requested data.</typeparam>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Events.RequestData`1.Data">
+            <summary>
+            Gets or sets the requested data.
+            </summary>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Events.SingleSubEvent`1">
+            <summary>
+            A PubSubEvent that support only a single subscriber.
+            </summary>
+            <typeparam name="T">The payload of the event.</typeparam>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Events.SingleSubEvent`1.Subscribe(System.Action{`0},Prism.Events.ThreadOption,System.Boolean,System.Predicate{`0})">
+            <summary>
+            Subscribes a delegate to an event.
+            </summary>
+            <param name="action">The delegate that gets executed when the event is published.</param>
+            <param name="threadOption">Specifies on which thread to receive the delegate callback.</param>
+            <param name="keepSubscriberReferenceAlive">
+            When true, the <see cref="T:Prism.Events.PubSubEvent`1"/> keeps a reference to the subscriber so it does not get garbage collected.
+            </param>
+            <param name="filter">Filter to evaluate if the subscriber should receive the event.</param>
+            <returns>A Prism.Events.SubscriptionToken that uniquely identifies the added subscription.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown when there is already a subscriber to this event.</exception>
+            <remarks>
+            This override is the final call of every Subscribe overloads in <see cref="T:Prism.Events.PubSubEvent`1"/>, any overload can be used
+            with the same limitations.
+            </remarks>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Extensions.DependencyObjectExtensions">
+            <summary>
+            Extension methods for DependencyObjects.
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Extensions.DependencyObjectExtensions.GetChildOfType``1(System.Windows.DependencyObject)">
+            <summary>
+            Get a the first encountered child of type T found in obj visual tree.
+            </summary>
+            <typeparam name="T">A dependency object type.</typeparam>
+            <param name="obj">The object to search into.</param>
+            <returns>The first child of type T found in the visual tree of obj.</returns>
+            <remarks>The algorithm uses a Depth-First search.</remarks>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Extensions.EnumDescriptionReader">
+            <summary>
+            Add extension methods to get description from the Description attribute.
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Extensions.EnumDescriptionReader.GetDescription(System.Enum)">
+            <summary>
+            Return the string contained in the Description attribute.
+            </summary>
+            <param name="value">The enum to get description for.</param>
+            <returns>The description string, null if there is no Description attribute.</returns>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Extensions.EnumResourceStringReader">
+            <summary>
+            Add extension methods to get description resources from the Description attribute.
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Extensions.EnumResourceStringReader.Initialize(System.Resources.ResourceManager)">
+            <summary>
+            Must be called before any other call to this class. It initialize the ResourceManager instance to use.
+            </summary>
+            <param name="resourceManager">The ResourceManager instance to use with the extension methods.</param>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Extensions.EnumResourceStringReader.GetResourceString(System.Enum)">
+            <summary>
+            Return the string resource associated with this enum, via the Description attribute.
+            </summary>
+            <param name="value">The enum to get a string for.</param>
+            <returns>The description string resource, null if there is no Description attribute.</returns>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Helper.ReflectedProperty">
+            <summary>
+            ReflectedProperty
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Helper.ReflectedProperty.Property">
+            <summary>
+            Property
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Helper.ReflectedProperty.PropertyOwner">
+            <summary>
+            PropertyOwner
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Helper.ReflectedProperty.Index">
+            <summary>
+            Index
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Helper.ReflectedProperty.GetValue">
+            <summary>
+            GetValue
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Helper.ReflectedProperty.SetValue(System.Object)">
+            <summary>
+            SetValue
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Helper.ReflectionHelper">
+            <summary>
+            ReflectionHelper
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Helper.ReflectionHelper.ExecuteCommand(System.String,System.Object,System.Object)">
+            <summary>
+            ExecuteCommand
+            </summary>
+            <param name="commandName"></param>
+            <param name="commandOwner"></param>
+            <param name="commandParameter"></param>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Helper.ReflectionHelper.GetProperty(System.String,System.Object)">
+            <summary>
+            GetProperty
+            </summary>
+            <param name="propertyName"></param>
+            <param name="propertyOwner"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Helper.ReflectionHelper.GetPropertyValue(System.String,System.Object)">
+            <summary>
+            GetPropertyValue
+            </summary>
+            <param name="propertyName"></param>
+            <param name="propertyOwner"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Helper.ReflectionHelper.SetPropertyValue(System.String,System.Object,System.Object)">
+            <summary>
+            SetPropertyValue
+            </summary>
+            <param name="propertyName"></param>
+            <param name="propertyOwner"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Helper.ReflectionHelper.HookPropertyEvent(System.Object,System.String,System.String,System.String,System.Object)">
+            <summary>
+            HookPropertyEvent
+            </summary>
+            <param name="delegateOwner"></param>
+            <param name="methodName"></param>
+            <param name="eventName"></param>
+            <param name="propertyName"></param>
+            <param name="propertyOwner"></param>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Helper.ReflectionHelper.UnHookPropertyEvent(System.Object,System.String,System.String,System.String,System.Object)">
+            <summary>
+            UnHookPropertyEvent
+            </summary>
+            <param name="delegateOwner"></param>
+            <param name="methodName"></param>
+            <param name="eventName"></param>
+            <param name="propertyName"></param>
+            <param name="propertyOwner"></param>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Helper.ReflectionHelper.TryConvertType(System.Type,System.Object,System.Object@)">
+            <summary>
+            TryConvertType
+            </summary>
+            <param name="type"></param>
+            <param name="obj"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Notifications.FileDialogNotificationCommon">
+            <summary>
+            Base class for file dialog notifications.
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Notifications.FileDialogNotificationCommon.InitialDirectory">
+            <summary>
+            Gets or set the file dialog InitialDirectory.
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Notifications.FileDialogNotificationCommon.SafeFileName">
+            <summary>
+            Gets or sets the file name associated with the file dialog.
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Notifications.FileDialogNotificationCommon.FilePath">
+            <summary>
+            Gets or sets the file path associated with the file dialog.
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Notifications.FileDialogNotificationCommon.Filter">
+            <summary>
+            Gets or sets the filter to apply to the file dialog.
+            </summary>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Notifications.ShowLoadFileDialogNotification">
+            <summary>
+            Notification for the <see cref="T:PresenterFoundation.Mvvm.Actions.ShowLoadFileDialogAction"/>.
+            </summary>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Tools.MousePositionHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Tools.MousePositionHelper.IsInside(System.Windows.Point,System.Windows.Size)">
+            <summary>
+            
+            </summary>
+            <param name="pos"></param>
+            <param name="renderSize"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Triggers.EventToCommand">
+            <summary>
+            A trigger action that invokes a command with an EventArgs object or a conversion of such object as a parameter.
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.Triggers.EventToCommand.CommandProperty">
+            <summary>
+            Identifies the PresenterFoundation.Mvvm.Triggers.EventToCommand.Command dependency property.
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Triggers.EventToCommand.Command">
+            <summary>
+            Gets or sets the command to invoke.
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Triggers.EventToCommand.Converter">
+            <summary>
+            A converter to transform the EventArgs object to a data object consumable by a ViewModel.
+            </summary>
+            <remarks>
+            If this property is null, the EventArgs object will be passed as-is as the command parameter.
+            </remarks>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Triggers.EventToCommand.ConverterParameter">
+            <summary>
+            A parameter to pass to the converter.
+            </summary>
+            <remarks>
+            If the property Converter is null, this property is ignored.
+            </remarks>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Triggers.EventToCommand.Invoke(System.Object)">
+            <summary>
+            Invokes the action.
+            </summary>
+            <param name="parameter">
+            The parameter to the action. If used inside an EventTrigger, parameter is an EventArgs.
+            </param>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Triggers.IEventArgsConverter">
+            <summary>
+            Provide a way to convert an EventArgs object to a data object that can be consumed by a ViewModel.
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Triggers.IEventArgsConverter.Convert(System.EventArgs,System.Object)">
+            <summary>
+            Converts an EventArgs object to a data object that can be consumed by a ViewModel.
+            </summary>
+            <param name="eventArgs">The EventArgs object.</param>
+            <param name="converterParameter">A parameter to use during the conversion. Can be null.</param>
+            <returns>The data object extracted from the EventArgs object.</returns>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.ValidationRules.AlphaNumericRule">
+            <summary>
+            Rule to validate that input is alphanumerical
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.ValidationRules.AlphaNumericRule.AcceptedCaracters">
+            <summary>
+            Extra caracters to accept
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.ValidationRules.AlphaNumericRule.Validate(System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Validates that input is alphanumerical
+            </summary>
+            <param name="value">Input</param>
+            <param name="cultureInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.ValidationRules.BaseValidationRule">
+            <summary>
+            Base class for validation rules with ErrorMessage as parameter
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.ValidationRules.BaseValidationRule.ErrorMessage">
+            <summary>
+            Message to show when input is not valid
+            </summary>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.ValidationRules.ValidationDelegate">
+            <summary>
+            Delegated rule signature
+            </summary>
+            <param name="value">Input</param>
+            <param name="cultureInfo"></param>
+            <returns>Validation result</returns>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.ValidationRules.Validation">
+            <summary>
+            Dependency object for validation rule
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.ValidationRules.Validation.Delegate">
+            <summary>
+            Validation function delegate
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.ValidationRules.Validation.DelegateProperty">
+            <summary>
+            Dependency property associated with delegate
+            </summary>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.ValidationRules.DelegatedRule">
+            <summary>
+            Dynamicly delegated rule
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.ValidationRules.DelegatedRule.ValidationRule">
+            <summary>
+            Function of validation
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.ValidationRules.DelegatedRule.Validate(System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Validates input using delegate
+            </summary>
+            <param name="value">Input</param>
+            <param name="cultureInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.ValidationRules.EmptyOrWhiteSpacesRule">
+            <summary>
+            Rule to validate that input is not null, empty or white space only
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.ValidationRules.EmptyOrWhiteSpacesRule.Validate(System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Validates that input is not null, empty or white space only
+            </summary>
+            <param name="value">Input</param>
+            <param name="cultureInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.ValidationRules.InvalidNames">
+            <summary>
+            Bindable dependency object containing invalid names
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.ValidationRules.InvalidNames.Names">
+            <summary>
+            List of invalid names
+            </summary>
+        </member>
+        <member name="F:PresenterFoundation.Mvvm.ValidationRules.InvalidNames.NamesProperty">
+            <summary>
+            Dependency property associated with names
+            </summary>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.ValidationRules.InvalidNamesRule">
+            <summary>
+            Rule to validate input is not an invalid name
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.ValidationRules.InvalidNamesRule.InvalidNames">
+            <summary>
+            Bindable object containing list of invalid names
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.ValidationRules.InvalidNamesRule.IsCaseSensitive">
+            <summary>
+            Determines if case should be considered in the validation
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.ValidationRules.InvalidNamesRule.#ctor">
+            <summary>
+            Rule to validate input is not an invalid name
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.ValidationRules.InvalidNamesRule.Validate(System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Validates that input is not an invalid name
+            </summary>
+            <param name="value">Input</param>
+            <param name="cultureInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PresenterFoundation.Mvvm.Xaml.EnumBindingSourceExtension">
+            <summary>
+            A markup extension that provides the collection of values from a specific enum type.
+            </summary>
+        </member>
+        <member name="P:PresenterFoundation.Mvvm.Xaml.EnumBindingSourceExtension.EnumType">
+            <summary>
+            Gets or sets the tyoe of enum to bind from.
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Xaml.EnumBindingSourceExtension.#ctor">
+            <summary>
+            Initialize a new instance of the EnumBindingSourceExtension class.
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Xaml.EnumBindingSourceExtension.#ctor(System.Type)">
+            <summary>
+            Initialize a new instance of the EnumBindingSourceExtension class with a specific enum type.
+            </summary>
+        </member>
+        <member name="M:PresenterFoundation.Mvvm.Xaml.EnumBindingSourceExtension.ProvideValue(System.IServiceProvider)">
+            <summary>
+            Provides a collection of enum values as the value of the target property for this markup extension.
+            </summary>
+            <param name="serviceProvider">A service provider helper that can provide services for the markup extension.</param>
+            <returns>A collection of the enum values defined in EnumType.</returns>
+        </member>
+    </members>
+</doc>
